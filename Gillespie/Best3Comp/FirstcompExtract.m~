@@ -1,0 +1,37 @@
+%gets the structures from intermediate compartments
+dirData = dir('Simulations');
+for j=3:68
+    j
+    fileName=['Simulations/',dirData(j).name]
+    load(fileName)
+    firstcomp={};
+    for i=1:10000
+        firstcomp{i}=glycans{i,3}{1,1};
+    end
+
+
+    firstcomp2={};
+    for i=1:10000
+    Products=firstcomp{i};
+     A=[];
+        if isempty(Products)
+            A=' ';
+        end
+        Products=sort(Products);
+        for j=1:length(Products)
+            A=[A,Products{j}];
+        end
+        firstcomp2{i}=A;
+    end
+
+    UniqueStructs=unique(firstcomp2);
+    FrequencyPlot={};
+    for i=1:length(UniqueStructs)
+        indices=find(ismember(firstcomp2,UniqueStructs(i)));
+        noRx=glycans{indices(1),6}(1);
+        FrequencyPlot=[FrequencyPlot;{UniqueStructs{i}}, {firstcomp2{indices(1)}},length(indices),{indices},noRx];
+    end
+    dirData(j).name
+   %SaveFile=['FirstCompFreq/',dirData(j).name]
+    save(SaveFile,'FrequencyPlot');
+end
