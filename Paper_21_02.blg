@@ -1,0 +1,73 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Paper_21_02.aux
+The style file: plain.bst
+Database file #1: Glycan_Paper.bib
+Unbalanced braces---line 178 of file Glycan_Paper.bib
+ : 
+ : }
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field part---line 221 of file Glycan_Paper.bib
+ : title=
+ :       'Comparative bioinformatics analysis of themammalian and bacterial glycomes',
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 283 of file Glycan_Paper.bib
+ : volume=277
+ :           ",
+I'm skipping whatever remains of this entry
+""" immediately follows a field name---line 288 of file Glycan_Paper.bib
+ : authors-
+ :         "Ola Blixt  and Kirk Allin and Ognian Bohorov and
+I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in Adibekian2010
+Warning--to sort, need author or key in Hokke1994
+Warning--to sort, need author or key in Muller2002
+Warning--empty author in Adibekian2010
+Warning--empty title in Adibekian2010
+Warning--empty journal in Adibekian2010
+Warning--empty year in Adibekian2010
+Warning--empty author in Hokke1994
+Warning--empty author in Muller2002
+You've used 4 entries,
+            2118 wiz_defined-function locations,
+            518 strings with 4684 characters,
+and the built_in function-call counts, 786 in all, are:
+= -- 70
+> -- 21
+< -- 0
++ -- 10
+- -- 6
+* -- 61
+:= -- 122
+add.period$ -- 8
+call.type$ -- 4
+change.case$ -- 14
+chr.to.int$ -- 0
+cite$ -- 13
+duplicate$ -- 40
+empty$ -- 72
+format.name$ -- 6
+if$ -- 159
+int.to.chr$ -- 0
+int.to.str$ -- 4
+missing$ -- 4
+newline$ -- 19
+num.names$ -- 2
+pop$ -- 18
+preamble$ -- 1
+purify$ -- 11
+quote$ -- 0
+skip$ -- 31
+stack$ -- 0
+substring$ -- 20
+swap$ -- 3
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 16
+warning$ -- 9
+while$ -- 2
+width$ -- 5
+write$ -- 35
+(There were 4 error messages)

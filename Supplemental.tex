@@ -65,12 +65,6 @@ When the exit time distribution is no longer an exponential distribution, but a 
 \item Similarly in intermediate residence times, terminal reactions should not be so slow as to remain uncompleted (otherwise terminal products will not be formed).  
 \end{enumerate}
 
-
-\begin{figure}[h]
-    \includegraphics[width=0.5\textwidth]{Figure_5.pdf}
-	\caption{A)Entropy as a function of residence time comparing a cyclic reaction network, a cyclic reaction network with a competing tip and a totally ordered reaction network. B) Entropy as a function of residence time comparting a totally ordered reaction network. A partially ordered reaction network, and totally ordered reaction network with competition.}
-\end{figure}
-
 We are assuming that saturated, or almost saturated products are desired by the cell in high abundances (and possibly intermediates). If these terminal species were not   All analytical calculations were checked with gillespie simulations. Should I insert the figures here?
 
 \section*{Supplemental: Totally Ordered Reaction Network}
@@ -206,38 +200,6 @@ E(\gamma)=\sum_{P(s,\gamma)}P(s,\gamma)*\log_2(P(s,\gamma))
 \end{equation}
 
 
-
-\section*{Supplemental:Abundances}
-For each species represented, we calculated the range of residence times during which the species was greater than $5\%$ of the total. $5\%$ was chosen as an arbitrary cutoff, which allowed us to visualize all the species in the totally ordered set [A]. 
- 
-\begin{figure}[H]
-    \includegraphics[width=\textwidth]{Supp_1.pdf}
-	\caption{A)}
-\end{figure}
-
-\section*{Supplemental:Probability Distributions}
-Here
-\begin{figure}[H]
-    \includegraphics[width=\textwidth]{Supp_2.pdf}
-	\caption{A)}
-\end{figure}
-
-\begin{figure}[H]
-    \includegraphics[width=\textwidth]{Supp_3.pdf}
-	\caption{A)}
-\end{figure}
-
-\begin{figure}[H]
-    \includegraphics[width=\textwidth]{Supp_4.pdf}
-	\caption{A)}
-\end{figure}
-
-\section*{Supplemental}
-\begin{figure}[H]
-    \includegraphics[width=\textwidth]{Supp_5.pdf}
-	\caption{A)}
-\end{figure}
-
 \section*{Supplemental: Compartmental Model}
 Another reaction network representation was used to construct compartmentalized reaction network. First the dataset is decomposed into a set of unique links. A link is represented by an acceptor monosaccharide, donor monosaccharide and carbon linkage $E(A,D,C)$. If on any structure in the dataset $E1(A1,D1,C1)<E2(A2,D2,C2)$, linkage two occurs after linkage one, a directed edge from E1 to E2 is drawn. This reaction network represents a partially ordered set of locally acting enzymes ($E(A,D,C)$). Such a graph implies that enzyme one can act after enzyme two. There is an additional competition list stored. These are sets of enzymes that compete for the same acceptor monosaccharide and carbon linkage. $E1(A1,D1,C1)$and $E2(A2,D2,C2)$ compete if $A1=A2$, $C1=C2$ and $D1\neq D2$.
 
@@ -293,25 +255,21 @@ An array of average residence times (1/$\gamma$) were sampled: [0.1:1.5:97.8]. F
 We recognize that these structures may not come from the same Golgi apparatus at all, and instead there are easy ways of constructing these four structures in higher abundance with three or four different programs. This would be a more traditional self-assembly approach whereby each structure is the desired output of a single program. For one structure two compartments is still required in order to prevent polymerization, but all other structures could be syntehsized as the terminating species of a single compartment. 
 
 \section*{Supplemental:KL Divergences}
-\begin{figure}[h]
-    \includegraphics[width=\textwidth]{Figure_5.pdf}
-	\caption{A)Entropy as a function of residence time comparing a cyclic reaction network, a cyclic reaction network with a competing tip and a totally ordered reaction network. B) Entropy as a function of residence time comparting a totally ordered reaction network. A partially ordered reaction network, and totally ordered reaction network with competition.}
-\end{figure}
-
 
 
 \section*{Supplemental Figure 1}
 
-\section*{Supplemental Figure 2}
-
-\begin{figure}[h]
-    \includegraphics[width=\textwidth]{Supp_8.pdf}
-	\caption{A)Entropy as a function of residence time comparing a cyclic reaction network, a cyclic reaction network with a competing tip and a totally ordered reaction network. B) Entropy as a function of residence time comparting a totally ordered reaction network. A partially ordered reaction network, and totally ordered reaction network with competition.}
+\begin{figure}
+\includegraphics[width=\textwidth]{SuppFig_1.pdf}
 \end{figure}
+
+\section*{Supplemental Figure 2}
 
 
 \section*{Supplemental Figure 3}
-
+\begin{figure}
+\includegraphics[width=\textwidth]{SuppFig_3.pdf}
+\end{figure}
 \section*{Supplemental Figure 4}
 \end{document}
 
