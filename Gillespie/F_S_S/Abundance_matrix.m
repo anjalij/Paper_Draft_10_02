@@ -2,7 +2,7 @@
 
 Direct=dir('FirstCompFreq')
 abundance_matrix_1=cell(175,68);
-abundance_matrix_1(2:end,1:2)=high_abund;
+abundance_matrix_1(2:end,1:2)=high_abund(:,1:2);
 for i=4:68
     fileName=Direct(i).name;
     load(['FirstCompFreq/',fileName])
@@ -21,7 +21,7 @@ end
 
 Direct=dir('SecondCompFreq')
 abundance_matrix_2=cell(175,68);
-abundance_matrix_2(2:end,1:2)=high_abund;
+abundance_matrix_2(2:end,1:2)=high_abund(:,1:2);
 for i=3:68
     fileName=Direct(i).name;
     load(['SecondCompFreq/',fileName])
@@ -40,7 +40,7 @@ end
 
 Direct=dir('Freq')
 abundance_matrix_3=cell(175,68);
-abundance_matrix_3(2:end,1:2)=high_abund;
+abundance_matrix_3(2:end,1:2)=high_abund(:,1:2);
 for i=3:68
     fileName=Direct(i).name;
     load(['Freq/',fileName])

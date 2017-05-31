@@ -9,7 +9,7 @@ for i=4:68
     load(['FirstCompFreq/',fileName])
     C=cell2mat(FrequencyPlot(:,3));
     ix=find(C>=10);
-    high_abund_1=[high_abund_1;Freq(ix,1)];
+    high_abund_1=[high_abund_1;FrequencyPlot(ix,1)];
     high_abund_1=unique(high_abund_1);
 end
 
@@ -19,9 +19,9 @@ high_abund_2={};
 for i=4:68
     fileName=Direct(i).name;
     load(['SecondCompFreq/',fileName])
-    C=cell2mat(FrequencyPlotio(:,3));
+    C=cell2mat(FrequencyPlot(:,3));
     ix=find(C>=10);
-    high_abund_2=[high_abund_2;Freq(ix,1)];
+    high_abund_2=[high_abund_2;FrequencyPlot(ix,1)];
     high_abund_2=unique(high_abund_2);
 end
 

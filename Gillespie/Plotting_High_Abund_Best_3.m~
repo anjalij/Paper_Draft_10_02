@@ -4,6 +4,7 @@
 %Stort by length
 %
 %Best
+
 load('Best3Comp/Observable/high_abund_mat_1.mat');
 load('Best3Comp/Observable/high_abund_mat_2.mat');
 load('Best3Comp/Observable/high_abund_mat_3.mat');
@@ -36,36 +37,55 @@ ix=find(Y3_2==0);
 P3_2(ix,:)=[];
 
 %plot range
-r=20;
+r=[-0.1,15];
+
+name='Images/Best3_4.8_Comp1';
+figure
+h=stem(P1_1(:,1),P1_1(:,2))
+set(h(1),'MarkerSize',0, 'Color','red','LineWidth',6)
+xlim(r)
+title('Comp 1: 4.8')
+saveas(h,[name,'.fig'],'fig')
+saveas(h,[name,'.png'],'png')
+saveas(h,[name,'.pdf'],'pdf')
+
+name='Images/Best3_96.8_Comp1';
+figure
+h=stem(P1_2(:,1),P1_2(:,2))
+xlim(r)
+set(h(1),'MarkerSize',0, 'Color','red','LineWidth',6)
+title('Comp 1: 96.3')
+saveas(h,[name,'.fig'],'fig')
+saveas(h,[name,'.png'],'png')
+saveas(h,[name,'.pdf'],'pdf')
+
+name='Images/Erlang_4.8_Comp2';
+figure
+h=stem(P2_1(:,1),P2_1(:,2))
+xlim(r)
+set(h(1),'MarkerSize',0, 'Color','red','LineWidth',6)
+title('Comp 2: 4.8')
+saveas(h,[name,'.fig'],'fig')
+saveas(h,[name,'.png'],'png')
+saveas(h,[name,'.pdf'],'pdf')
+
 
 figure
-subplot(3,2,1)
-stem(P1_1(:,1),P1_1(:,2))
-xlim([0,r])
-title('Comp 1: 4.8')
-
-subplot(3,2,2)
-stem(P1_2(:,1),P1_2(:,2))
-xlim([0,r])
-title('Comp 1: 96.3')
-
-subplot(3,2,3)
-stem(P2_1(:,1),P2_1(:,2))
-xlim([0,r])
-title('Comp 2: 4.8')
-
-subplot(3,2,4)
-stem(P2_2(:,1),P2_2(:,2))
-xlim([0,r])
+h=stem(P2_2(:,1),P2_2(:,2))
+xlim(r)
+set(h(1),'MarkerSize',0, 'Color','red','LineWidth',6)
 title('Comp 2: 96.3')
 
-subplot(3,2,5)
-stem(P3_1(:,1),P3_1(:,2))
-xlim([0,r])
+figure
+h=stem(P3_1(:,1),P3_1(:,2))
+xlim(r)
+set(h(1),'MarkerSize',0, 'Color','red','LineWidth',6)
 title('Comp 3: 4.8')
 
-subplot(3,2,6)
-stem(P3_2(:,1),P3_2(:,2))
-xlim([0,r])
+figure
+h=stem(P3_2(:,1),P3_2(:,2))
+xlim(r)
+set(h(1),'MarkerSize',0, 'Color','red','LineWidth',6)
 title('Comp 3: 96.3')
 
+%}

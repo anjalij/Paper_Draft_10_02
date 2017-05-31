@@ -4,9 +4,9 @@
 %Stort by length
 %
 %Best
-load('Best3Comp/Observable/high_abund_mat_1.mat');
-load('Best3Comp/Observable/high_abund_mat_2.mat');
-load('Best3Comp/Observable/high_abund_mat_3.mat');
+load('Observable/high_abund_mat_1.mat');
+load('Observable/high_abund_mat_2.mat');
+load('Observable/high_abund_mat_3.mat');
 X=[cell2mat(high_abund(:,3))];
 Y1_1=[cell2mat(abundance_matrix_1(2:end,6))]/10000;
 Y1_2=[cell2mat(abundance_matrix_1(2:end,55))]/10000;

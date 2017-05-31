@@ -4,16 +4,17 @@
 %Stort by length
 %
 %Best
-load('Best3Comp/Observable/high_abund_mat_1.mat');
-load('Best3Comp/Observable/high_abund_mat_2.mat');
-load('Best3Comp/Observable/high_abund_mat_3.mat');
+
+load('F_S_S/Observable/high_abund_mat_1.mat');
+load('F_S_S/Observable/high_abund_mat_2.mat');
+load('F_S_S/Observable/high_abund_mat_3.mat');
 X=[cell2mat(high_abund(:,3))];
-Y1_1=[cell2mat(abundance_matrix_1(2:end,6))]/10000;
-Y1_2=[cell2mat(abundance_matrix_1(2:end,55))]/10000;
-Y2_1=[cell2mat(abundance_matrix_2(2:end,6))]/10000;
-Y2_2=[cell2mat(abundance_matrix_2(2:end,55))]/10000;
-Y3_1=[cell2mat(abundance_matrix_3(2:end,6))]/10000;
-Y3_2=[cell2mat(abundance_matrix_3(2:end,55))]/10000;
+Y1_1=[cell2mat(abundance_matrix_1(2:end,26))]/10000;
+Y1_2=[cell2mat(abundance_matrix_1(2:end,66))]/10000;
+Y2_1=[cell2mat(abundance_matrix_2(2:end,26))]/10000;
+Y2_2=[cell2mat(abundance_matrix_2(2:end,66))]/10000;
+Y3_1=[cell2mat(abundance_matrix_3(2:end,26))]/10000;
+Y3_2=[cell2mat(abundance_matrix_3(2:end,66))]/10000;
 
 P1_1=[X,Y1_1];
 P1_2=[X,Y1_2];
@@ -36,35 +37,40 @@ ix=find(Y3_2==0);
 P3_2(ix,:)=[];
 
 %plot range
-r=20;
+r=[-0.1,20];
+
+name=
+figure
+h=stem(P1_1(:,1),P1_1(:,2))
+set(h(1),'MarkerSize',0, 'Color','red','LineWidth',6)
+xlim(r)
+title('Comp 1: 4.8')
+saveas(h,[name,'.fig'],'fig')
+saveas(h,[name,'.png'],'png')
+saveas(h,[name,'.pdf'],'pdf')
+
 
 figure
-subplot(3,2,1)
-stem(P1_1(:,1),P1_1(:,2))
-xlim([0,r])
-title('Comp 1: 4.8')
-
-subplot(3,2,2)
 stem(P1_2(:,1),P1_2(:,2))
 xlim([0,r])
 title('Comp 1: 96.3')
 
-subplot(3,2,3)
+figure
 stem(P2_1(:,1),P2_1(:,2))
 xlim([0,r])
 title('Comp 2: 4.8')
 
-subplot(3,2,4)
+figure
 stem(P2_2(:,1),P2_2(:,2))
 xlim([0,r])
 title('Comp 2: 96.3')
 
-subplot(3,2,5)
+figure
 stem(P3_1(:,1),P3_1(:,2))
 xlim([0,r])
 title('Comp 3: 4.8')
 
-subplot(3,2,6)
+figure
 stem(P3_2(:,1),P3_2(:,2))
 xlim([0,r])
 title('Comp 3: 96.3')
